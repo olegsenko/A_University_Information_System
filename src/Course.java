@@ -4,12 +4,13 @@
 public class Course {
     private String course;
 
+    //TODO: wtf
     public String[] yearsOfBachelors = {"BS1", "BS2", "BS3", "BS4"} ;
     public String[] yearsOfMasters = {"MS1", "MS2"};
 
 
-    public Course(String Year) {
-        this.course = Year;
+    public Course(String course) {
+        this.course = course;
     }
 
 
@@ -17,8 +18,8 @@ public class Course {
         return this.course;
     }
 
-    public void setCourse(String Year){
-        this.course = Year;
+    public void setCourse(String course){
+        this.course = course;
     }
 
 

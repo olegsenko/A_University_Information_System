@@ -8,9 +8,10 @@ public class Seminar {
     private String seminarCode;
     private List<TeacherAssistant> teacherAssistant;
 
-    public Seminar(String name, List<TeacherAssistant> TA) {
-        this.description = name;
-        this.teacherAssistant = TA;
+    public Seminar(String description, String seminarCode, List<TeacherAssistant> teacherAssistant) {
+        this.description = description;
+        this.seminarCode = seminarCode;
+        this.teacherAssistant = teacherAssistant;
     }
 
     public String getDescription() {

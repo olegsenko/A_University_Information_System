@@ -7,6 +7,7 @@ public class TeacherAssistant {
     private FullName taName;
     private List<Seminar> seminar;
 
+
     public FullName getTaName() {
         return taName;
     }
@@ -22,4 +23,5 @@ public class TeacherAssistant {
     public void setSeminar(List<Seminar> seminar) {
         this.seminar = seminar;
     }
+
 }
