@@ -3,7 +3,7 @@
  */
 public class Student {
 
-    public FullName name;
+    private FullName name;
     private Course year;
     private Subject subject;
 

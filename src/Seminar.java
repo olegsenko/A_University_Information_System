@@ -1,28 +1,39 @@
+import java.util.List;
+
 /**
  * Created by senko on 30.08.16.
  */
 public class Seminar {
-    private String name;
-    private teacherAssistant TA;
+    private String description;
+    private String seminarCode;
+    private List<TeacherAssistant> teacherAssistant;
 
-    public Seminar(String name, teacherAssistant TA) {
-        this.name = name;
-        this.TA = TA;
+    public Seminar(String name, List<TeacherAssistant> TA) {
+        this.description = name;
+        this.teacherAssistant = TA;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public teacherAssistant getTA() {
-        return TA;
+    public List<TeacherAssistant> getTeacherAssistant() {
+        return teacherAssistant;
     }
 
-    public void setTA(teacherAssistant TA) {
-        this.TA = TA;
+    public void setTeacherAssistant(TeacherAssistant teacherAssistant) {
+        this.teacherAssistant = (List<TeacherAssistant>)teacherAssistant;
+    }
+
+    public String getSeminarCode() {
+        return seminarCode;
+    }
+
+    public void setSeminarCode(String seminarCode) {
+        this.seminarCode = seminarCode;
     }
 }
