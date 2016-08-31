@@ -9,6 +9,21 @@ public class FullName {
     private String surname;
     Scanner in = new Scanner(System.in);
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
 
     public FullName(String name, String surname) {
         this.name = name;
@@ -16,7 +31,7 @@ public class FullName {
     }
 
 
-    public String getFullName (){
+    public String toString(){
         return this.surname + " " + this.name;
     }
 
