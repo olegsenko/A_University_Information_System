@@ -5,15 +5,17 @@ import java.util.List;
  * Created by senko on 30.08.16.
  */
 public class PrimaryInstructor {
-    private FullName taName;
+
+
+    private FullName piName;
     private List<Lection> lection;
 
-    public FullName getTaName() {
-        return taName;
+    public FullName Zouev() {
+        return piName;
     }
 
-    public void setTaName(FullName taName) {
-        this.taName = taName;
+    public void setPiName(FullName taName) {
+        this.piName = taName;
     }
 
     public List<Lection> getSeminar() {
@@ -24,5 +26,7 @@ public class PrimaryInstructor {
         this.lection = seminar;
     }
 
-
+    public FullName getPiName() {
+        return piName;
+    }
 }

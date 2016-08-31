@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -7,15 +8,37 @@ public class Subject {
 
     private String subjectName;
     private String description;
-    private List<TeacherAssistant> teacherAssistant;
+    private List<TeacherAssistant> teacherAssistants;
     private List<PrimaryInstructor> primaryInstructor;
     private Course course;
     private boolean isCore;//core or elective
     private List<Lection> lection;
     private List<Seminar> seminar;
+    private Assignment assignment;
     private Grade grade;
     private String time;
     private String roomNo;
+
+    public void addTeacherAssistant(TeacherAssistant teacherAssistant) {
+
+
+        if (this.teacherAssistants == null) {
+            this.teacherAssistants = new ArrayList<>();
+        }
+        this.teacherAssistants.add(teacherAssistant);
+
+    }
+
+    public void addPrimaryInstructor(PrimaryInstructor primaryInstructor) {
+
+
+        if (this.primaryInstructor == null) {
+            this.primaryInstructor = new ArrayList<>();
+        }
+        this.primaryInstructor.add(primaryInstructor);
+
+    }
+
 
     public String getTime() {
         return time;
@@ -50,12 +73,10 @@ public class Subject {
     }
 
     public List<TeacherAssistant> getTeacherAssistant() {
-        return teacherAssistant;
+        return teacherAssistants;
     }
 
-    public void setTeacherAssistant(List<TeacherAssistant> teacherAssistant) {
-        this.teacherAssistant = teacherAssistant;
-    }
+
 
     public List<PrimaryInstructor> getPrimaryInstructor() {
         return primaryInstructor;
@@ -103,5 +124,20 @@ public class Subject {
 
     public void setGrade(Grade grade) {
         this.grade = grade;
+    }
+    public void setTeacherAssistants(List<TeacherAssistant> teacherAssistants) {
+        this.teacherAssistants = teacherAssistants;
+    }
+
+    public List<TeacherAssistant> getTeacherAssistants() {
+        return teacherAssistants;
+    }
+
+    public Assignment getAssignment() {
+        return assignment;
+    }
+
+    public void setAssignment(Assignment assignment) {
+        this.assignment = assignment;
     }
 }

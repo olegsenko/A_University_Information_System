@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -8,10 +9,15 @@ public class Seminar {
     private String seminarCode;
     private List<TeacherAssistant> teacherAssistant;
 
-    public Seminar(String description, String seminarCode, List<TeacherAssistant> teacherAssistant) {
+
+    public Seminar(String description, String seminarCode, TeacherAssistant teacherAssistant) {
         this.description = description;
         this.seminarCode = seminarCode;
-        this.teacherAssistant = teacherAssistant;
+
+        if (this.teacherAssistant == null) {
+            this.teacherAssistant = new ArrayList<>();
+        }
+        this.teacherAssistant.add(teacherAssistant);
     }
 
     public String getDescription() {
