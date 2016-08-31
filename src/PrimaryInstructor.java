@@ -1,3 +1,5 @@
+import student.Subjects.*;
+
 import java.util.List;
 
 /**
@@ -23,7 +25,5 @@ public class PrimaryInstructor {
         this.lection = seminar;
     }
 
-    public void putGrade(Student student, Subject subject){
-          //  subject.setGrade(student.Subjects.Gr);
-    }
+
 }

@@ -8,6 +8,15 @@ public class Lection {
     private String lectionCode;
     private List<PrimaryInstructor> primaryInstructor;
     private String time;
+    private String roomNo;
+
+    public String getRoomNo() {
+        return roomNo;
+    }
+
+    public void setRoomNo(String roomNo) {
+        this.roomNo = roomNo;
+    }
 
     public String getTime() {
         return time;
