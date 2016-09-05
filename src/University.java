@@ -8,7 +8,7 @@ public class University {
 
     private List<Student> students;
 
-    private List<PrimaryInstructor> primaryInstructors;
+    public List<PrimaryInstructor> primaryInstructors;
 
     private List<TeacherAssistant> teacherAssistants;
 

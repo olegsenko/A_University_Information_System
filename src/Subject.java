@@ -16,8 +16,7 @@ public class Subject {
     private List<Seminar> seminar;
     private Assignment assignment;
     private Grade grade;
-    private String time;
-    private String roomNo;
+
 
     public void addTeacherAssistant(TeacherAssistant teacherAssistant) {
 
@@ -40,21 +39,6 @@ public class Subject {
     }
 
 
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getRoomNo() {
-        return roomNo;
-    }
-
-    public void setRoomNo(String roomNo) {
-        this.roomNo = roomNo;
-    }
 
     public String getSubjectName() {
         return subjectName;

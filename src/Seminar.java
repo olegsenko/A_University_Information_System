@@ -8,7 +8,29 @@ public class Seminar {
     private String description;
     private String seminarCode;
     private List<TeacherAssistant> teacherAssistant;
+    private String time;
+    private String roomNo;
 
+    public void setTeacherAssistant(List<TeacherAssistant> teacherAssistant) {
+        this.teacherAssistant = teacherAssistant;
+    }
+
+    public String getTime() {
+
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getRoomNo() {
+        return roomNo;
+    }
+
+    public void setRoomNo(String roomNo) {
+        this.roomNo = roomNo;
+    }
 
     public Seminar(String description, String seminarCode, TeacherAssistant teacherAssistant) {
         this.description = description;

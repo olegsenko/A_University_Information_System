@@ -4,7 +4,7 @@
 public class Course {
     private String course;
 
-    //TODO: wtf
+    //TODO:
     public String[] yearsOfBachelors = {"BS1", "BS2", "BS3", "BS4"} ;
     public String[] yearsOfMasters = {"MS1", "MS2"};
 

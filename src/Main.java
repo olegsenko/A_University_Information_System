@@ -22,9 +22,9 @@ public class Main {
         //introToProg.getSeminar().add(Seminar introToProg = new Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
         //Seminar introToProg = new Seminar("introduction To Programming", "ItP", alex_Tchitchigin );
 
-        eugene_Zouev.setPiName(new FullName("Eugene", "Zouev"));
+        eugene_Zouev.setName(new FullName("Eugene", "Zouev"));
 
-        alex_Tchitchigin.setTaName(new FullName("Alex", "Tchitchigin"));
+        alex_Tchitchigin.setName(new FullName("Alex", "Tchitchigin"));
 
         ivanIvanov.setName(new FullName("ivan", "ivanov"));
 
@@ -43,12 +43,12 @@ public class Main {
 
         for (TeacherAssistant s :
                 introToProg.getTeacherAssistant()) {
-            System.out.println(s.getTaName());
+            System.out.println(s.getName());
         }
 
         for (PrimaryInstructor s :
                 introToProg.getPrimaryInstructor()) {
-            System.out.println(s.getPiName());
+            System.out.println(s.getName());
         }
 
 
