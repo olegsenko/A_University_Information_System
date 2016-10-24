@@ -5,12 +5,24 @@ import java.util.Scanner;
  */
 public class FullName {
 
+
+    public FullName() {
+    }
+
     private String name;
     private String surname;
-    Scanner in = new Scanner(System.in);
+
 
     public String getName() {
         return name;
+    }
+
+    public void setName(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter name");
+        this.name = in.nextLine();
+        System.out.println("Enter surname");
+        this.surname = in.nextLine();
     }
 
     public void setName(String name) {
@@ -31,10 +43,9 @@ public class FullName {
     }
 
 
-    public String toString(){
+    public String toString() {
         return this.surname + " " + this.name;
     }
-
 
 
 }

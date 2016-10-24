@@ -5,8 +5,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         University innopolis = new University();
+
+
+
 
         Student olegSenko = new Student();
         Student ivanIvanov = new Student();
@@ -14,6 +16,8 @@ public class Main {
         PrimaryInstructor eugene_Zouev = new PrimaryInstructor();
 
         Subject introToProg = new Subject();
+        Seminar iTP = new Seminar();
+
 
         introToProg.setSubjectName("Introduction to Programming");
         introToProg.addTeacherAssistant(alex_Tchitchigin);
@@ -30,7 +34,12 @@ public class Main {
 
         olegSenko.setName(new FullName("Oleg", "Senko"));
 
+
         //System.out.println(olegSenko.getName().toString());
+
+        iTP.setTeacherAssistant(alex_Tchitchigin);
+
+        iTP.getTeacherAssistant();
 
         innopolis.getStudents().add(olegSenko);
         innopolis.getStudents().add(ivanIvanov);
@@ -50,9 +59,6 @@ public class Main {
                 introToProg.getPrimaryInstructor()) {
             System.out.println(s.getName());
         }
-
-
-
 
 
     }

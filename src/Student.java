@@ -3,10 +3,10 @@ import java.util.List;
 /**
  * Created by senko on 30.08.16.
  */
-public class Student extends Person{
+public class Student extends Person {
 
     private String id;
-    private Course year;
+    private Group year;
     public List<Subject> Subjects;
 
     public String getId() {
@@ -17,11 +17,11 @@ public class Student extends Person{
         this.id = id;
     }
 
-    public Course getYear() {
+    public Group getYear() {
         return year;
     }
 
-    public void setYear(Course year) {
+    public void setYear(Group year) {
         this.year = year;
     }
 

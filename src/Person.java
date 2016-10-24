@@ -2,6 +2,7 @@
  * Created by senko on 05.09.16.
  */
 public class Person {
+
     FullName name;
 
     public FullName getName() {

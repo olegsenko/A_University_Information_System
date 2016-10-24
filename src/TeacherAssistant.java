@@ -3,7 +3,7 @@ import java.util.List;
 /**
  * Created by senko on 30.08.16.
  */
-public class TeacherAssistant extends Person{
+public class TeacherAssistant extends Person {
 
     private List<Seminar> seminar;
 

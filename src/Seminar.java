@@ -5,15 +5,20 @@ import java.util.List;
  * Created by senko on 30.08.16.
  */
 public class Seminar {
+
     private String description;
     private String seminarCode;
-    private List<TeacherAssistant> teacherAssistant;
+    private List<TeacherAssistant> teacherAssistants;
     private String time;
     private String roomNo;
 
     public void setTeacherAssistant(List<TeacherAssistant> teacherAssistant) {
-        this.teacherAssistant = teacherAssistant;
+        this.teacherAssistants = teacherAssistant;
     }
+
+    public Seminar() {
+    }
+
 
     public String getTime() {
 
@@ -36,10 +41,10 @@ public class Seminar {
         this.description = description;
         this.seminarCode = seminarCode;
 
-        if (this.teacherAssistant == null) {
-            this.teacherAssistant = new ArrayList<>();
+        if (this.teacherAssistants == null) {
+            this.teacherAssistants = new ArrayList<>();
         }
-        this.teacherAssistant.add(teacherAssistant);
+        this.teacherAssistants.add(teacherAssistant);
     }
 
     public String getDescription() {
@@ -51,11 +56,14 @@ public class Seminar {
     }
 
     public List<TeacherAssistant> getTeacherAssistant() {
-        return teacherAssistant;
+        return teacherAssistants;
     }
 
     public void setTeacherAssistant(TeacherAssistant teacherAssistant) {
-        this.teacherAssistant = (List<TeacherAssistant>)teacherAssistant;
+        if (this.teacherAssistants == null) {
+            this.teacherAssistants = new ArrayList<>();
+        }
+        this.teacherAssistants.add(teacherAssistant);
     }
 
     public String getSeminarCode() {

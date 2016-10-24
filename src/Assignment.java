@@ -1,10 +1,13 @@
+import java.util.Date;
+
 /**
  * Created by senko on 30.08.16.
  */
 public class Assignment {
+
     private String task;
-    private String deadline;
-    private String points;
+    private Date deadline;
+    private int points;
 
     public String getTask() {
         return task;
@@ -14,19 +17,19 @@ public class Assignment {
         this.task = task;
     }
 
-    public String getDeadline() {
+    public Date getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(String deadline) {
+    public void setDeadline(Date deadline) {
         this.deadline = deadline;
     }
 
-    public String getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public void setPoints(String points) {
+    public void setPoints(int points) {
         this.points = points;
     }
 

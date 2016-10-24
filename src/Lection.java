@@ -4,9 +4,10 @@ import java.util.List;
  * Created by senko on 30.08.16.
  */
 public class Lection {
+
     private String description;
     private String lectionCode;
-    private List<PrimaryInstructor> primaryInstructor;
+    private PrimaryInstructor primaryInstructor;
     private String time;
     private String roomNo;
 
@@ -42,11 +43,11 @@ public class Lection {
         this.lectionCode = lectionCode;
     }
 
-    public List<PrimaryInstructor> getPrimaryInstructor() {
+    public PrimaryInstructor getPrimaryInstructor() {
         return primaryInstructor;
     }
 
-    public void setPrimaryInstructor(List<PrimaryInstructor> primaryInstructor) {
+    public void setPrimaryInstructor(PrimaryInstructor primaryInstructor) {
         this.primaryInstructor = primaryInstructor;
     }
 }

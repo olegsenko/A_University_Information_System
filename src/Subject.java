@@ -10,12 +10,12 @@ public class Subject {
     private String description;
     private List<TeacherAssistant> teacherAssistants;
     private List<PrimaryInstructor> primaryInstructor;
-    private Course course;
+    private Group course;
     private boolean isCore;//core or elective
     private List<Lection> lection;
     private List<Seminar> seminar;
     private Assignment assignment;
-    private Grade grade;
+    private FinalGrade finalGrade;
 
 
     public void addTeacherAssistant(TeacherAssistant teacherAssistant) {
@@ -39,7 +39,6 @@ public class Subject {
     }
 
 
-
     public String getSubjectName() {
         return subjectName;
     }
@@ -61,7 +60,6 @@ public class Subject {
     }
 
 
-
     public List<PrimaryInstructor> getPrimaryInstructor() {
         return primaryInstructor;
     }
@@ -70,11 +68,11 @@ public class Subject {
         this.primaryInstructor = primaryInstructor;
     }
 
-    public Course getCourse() {
+    public Group getCourse() {
         return course;
     }
 
-    public void setCourse(Course course) {
+    public void setCourse(Group course) {
         this.course = course;
     }
 
@@ -102,13 +100,14 @@ public class Subject {
         this.seminar = seminar;
     }
 
-    public Grade getGrade() {
-        return grade;
+    public FinalGrade getFinalGrade() {
+        return finalGrade;
     }
 
-    public void setGrade(Grade grade) {
-        this.grade = grade;
+    public void setFinalGrade(FinalGrade finalGrade) {
+        this.finalGrade = finalGrade;
     }
+
     public void setTeacherAssistants(List<TeacherAssistant> teacherAssistants) {
         this.teacherAssistants = teacherAssistants;
     }

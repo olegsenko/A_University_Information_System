@@ -22,7 +22,6 @@ public class University {
     }
 
 
-
     public void setStudents(List<Student> students) {
         this.students = students;
     }
@@ -50,6 +49,7 @@ public class University {
     public void setSchedule(List<TeachingSchedule> schedule) {
         this.schedule = schedule;
     }
+
     public String toString() {
         return students.toString();
     }
