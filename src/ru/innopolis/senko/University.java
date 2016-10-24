@@ -1,3 +1,5 @@
+package ru.innopolis.senko;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-import java.util.List;
+package ru.innopolis.senko;
 
 /**
  * Created by senko on 30.08.16.

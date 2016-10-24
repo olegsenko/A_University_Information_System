@@ -1,3 +1,5 @@
+package ru.innopolis.senko;
+
 /**
  * Created by senko on 30.08.16.
  */
@@ -23,8 +25,8 @@ public class Main {
         introToProg.addTeacherAssistant(alex_Tchitchigin);
         introToProg.addPrimaryInstructor(eugene_Zouev);
 
-        //introToProg.getSeminar().add(Seminar introToProg = new Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
-        //Seminar introToProg = new Seminar("introduction To Programming", "ItP", alex_Tchitchigin );
+        //introToProg.getSeminar().add(ru.innopolis.senko.Seminar introToProg = new ru.innopolis.senko.Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
+        //ru.innopolis.senko.Seminar introToProg = new ru.innopolis.senko.Seminar("introduction To Programming", "ItP", alex_Tchitchigin );
 
         eugene_Zouev.setName(new FullName("Eugene", "Zouev"));
 

@@ -1,3 +1,5 @@
+package ru.innopolis.senko;
+
 /**
  * Created by senko on 05.09.16.
  */

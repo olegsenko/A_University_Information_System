@@ -1,3 +1,4 @@
+package ru.innopolis.senko;
 
 import java.util.List;
 
