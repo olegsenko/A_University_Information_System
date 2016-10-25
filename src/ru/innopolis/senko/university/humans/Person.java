@@ -1,4 +1,4 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university.humans;
 
 /**
  * Created by senko on 05.09.16.

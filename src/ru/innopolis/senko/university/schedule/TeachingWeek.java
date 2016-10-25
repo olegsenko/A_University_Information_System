@@ -1,4 +1,4 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university.schedule;
 
 /**
  * Created by senko on 31.08.16.

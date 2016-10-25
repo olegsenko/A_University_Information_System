@@ -1,4 +1,7 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university;
+
+import ru.innopolis.senko.university.humans.PrimaryInstructor;
+import ru.innopolis.senko.university.humans.TeacherAssistant;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +14,12 @@ public class Subject {
     private String subjectName;
     private String description;
     private List<TeacherAssistant> teacherAssistants;
-    private List<PrimaryInstructor> primaryInstructor;
+    private List<PrimaryInstructor> primaryInstructors;
     private Group course;
     private boolean isCore;//core or elective
     private List<Lection> lection;
     private List<Seminar> seminar;
-    private Assignment assignment;
+    private List<Assignment> assignments;
     private FinalGrade finalGrade;
 
 
@@ -33,10 +36,10 @@ public class Subject {
     public void addPrimaryInstructor(PrimaryInstructor primaryInstructor) {
 
 
-        if (this.primaryInstructor == null) {
-            this.primaryInstructor = new ArrayList<>();
+        if (this.primaryInstructors == null) {
+            this.primaryInstructors = new ArrayList<>();
         }
-        this.primaryInstructor.add(primaryInstructor);
+        this.primaryInstructors.add(primaryInstructor);
 
     }
 
@@ -62,12 +65,12 @@ public class Subject {
     }
 
 
-    public List<PrimaryInstructor> getPrimaryInstructor() {
-        return primaryInstructor;
+    public List<PrimaryInstructor> getPrimaryInstructors() {
+        return primaryInstructors;
     }
 
-    public void setPrimaryInstructor(List<PrimaryInstructor> primaryInstructor) {
-        this.primaryInstructor = primaryInstructor;
+    public void setPrimaryInstructors(List<PrimaryInstructor> primaryInstructors) {
+        this.primaryInstructors = primaryInstructors;
     }
 
     public Group getCourse() {
@@ -118,11 +121,5 @@ public class Subject {
         return teacherAssistants;
     }
 
-    public Assignment getAssignment() {
-        return assignment;
-    }
 
-    public void setAssignment(Assignment assignment) {
-        this.assignment = assignment;
-    }
 }

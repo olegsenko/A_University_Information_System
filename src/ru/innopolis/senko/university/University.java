@@ -1,4 +1,9 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university;
+
+import ru.innopolis.senko.university.humans.PrimaryInstructor;
+import ru.innopolis.senko.university.humans.Student;
+import ru.innopolis.senko.university.humans.TeacherAssistant;
+import ru.innopolis.senko.university.schedule.TeachingSchedule;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +34,9 @@ public class University {
     }
 
     public List<PrimaryInstructor> getPrimaryInstructors() {
+        if (primaryInstructors == null) {
+            primaryInstructors = new ArrayList<>();
+        }
         return primaryInstructors;
     }
 

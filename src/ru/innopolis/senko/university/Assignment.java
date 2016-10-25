@@ -1,4 +1,4 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university;
 
 import java.util.Date;
 

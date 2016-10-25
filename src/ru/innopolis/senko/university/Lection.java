@@ -1,4 +1,6 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university;
+
+import ru.innopolis.senko.university.humans.PrimaryInstructor;
 
 /**
  * Created by senko on 30.08.16.
@@ -10,6 +12,10 @@ public class Lection {
     private PrimaryInstructor primaryInstructor;
     private String time;
     private String roomNo;
+
+    public Lection(PrimaryInstructor primaryInstructor) {
+        this.primaryInstructor = primaryInstructor;
+    }
 
     public String getTime() {
         return time;

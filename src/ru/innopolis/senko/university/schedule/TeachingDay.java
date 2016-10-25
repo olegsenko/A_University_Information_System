@@ -1,5 +1,8 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university.schedule;
 
+import ru.innopolis.senko.university.Subject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,7 +21,13 @@ public class TeachingDay {
     }
 
     public void addSubject(Subject subject) {
+
+
+        if (this.subjects == null) {
+            this.subjects = new ArrayList<>();
+        }
         this.subjects.add(subject);
     }
+
 
 }

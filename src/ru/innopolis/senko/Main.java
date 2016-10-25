@@ -1,11 +1,20 @@
 package ru.innopolis.senko;
 
+import ru.innopolis.senko.university.*;
+import ru.innopolis.senko.university.humans.FullName;
+import ru.innopolis.senko.university.humans.PrimaryInstructor;
+import ru.innopolis.senko.university.humans.Student;
+import ru.innopolis.senko.university.humans.TeacherAssistant;
+import ru.innopolis.senko.university.repository.Information;
+
+import java.io.IOException;
+
 /**
  * Created by senko on 30.08.16.
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         University innopolis = new University();
 
@@ -13,6 +22,10 @@ public class Main {
 
 
         Student olegSenko = new Student();
+        olegSenko.setCourse(new Course("MS1", 2015));
+        olegSenko.setGroup(new Group(" 4"));
+
+        System.out.println(olegSenko.getCourse());
         Student ivanIvanov = new Student();
         TeacherAssistant alex_Tchitchigin = new TeacherAssistant();
         PrimaryInstructor eugene_Zouev = new PrimaryInstructor();
@@ -25,8 +38,8 @@ public class Main {
         introToProg.addTeacherAssistant(alex_Tchitchigin);
         introToProg.addPrimaryInstructor(eugene_Zouev);
 
-        //introToProg.getSeminar().add(ru.innopolis.senko.Seminar introToProg = new ru.innopolis.senko.Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
-        //ru.innopolis.senko.Seminar introToProg = new ru.innopolis.senko.Seminar("introduction To Programming", "ItP", alex_Tchitchigin );
+        //introToProg.getSeminar().add(ru.innopolis.senko.university.Seminar introToProg = new ru.innopolis.senko.university.Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
+        //ru.innopolis.senko.university.Seminar introToProg = new ru.innopolis.senko.university.Seminar("introduction To Programming", "ItP", alex_Tchitchigin );
 
         eugene_Zouev.setName(new FullName("Eugene", "Zouev"));
 
@@ -58,9 +71,11 @@ public class Main {
         }
 
         for (PrimaryInstructor s :
-                introToProg.getPrimaryInstructor()) {
+                introToProg.getPrimaryInstructors()) {
             System.out.println(s.getName());
         }
+
+        Information i = new Information(innopolis);
 
 
     }

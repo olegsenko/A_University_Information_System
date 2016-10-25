@@ -1,4 +1,4 @@
-package ru.innopolis.senko;
+package ru.innopolis.senko.university.humans;
 
 import java.util.Scanner;
 
@@ -7,19 +7,18 @@ import java.util.Scanner;
  */
 public class FullName {
 
-
-    public FullName() {
-    }
-
     private String name;
     private String surname;
 
+
+    public FullName() {
+    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(){
+    public void setName() {//name can be entered from console
         Scanner in = new Scanner(System.in);
         System.out.println("Enter name");
         this.name = in.nextLine();
