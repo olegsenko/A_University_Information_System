@@ -1,13 +1,13 @@
-Monday
-Qu Q PI 9:00-10:30 Data_modeling_and_databases 108_East DMD
-Sadegh N TA 10:40-12:10 Data_modeling_and_databases 307 DMD
-Noname Noname PI 15:00-16:30 English 321 Eng
-Truesday
-Khan A PI 9:00-10:30 Data_structures_and_algorythms 108_East DSA
-Adel a TA 10:40-12:10 Data_structures_and_algorythms 318 DSA
-Mazzara M PI 9:00-10:30 Object_oriented_programming 108_East OOP
-Ribera V TA 10:40-12:10 Object_oriented_programming 307 OOP
-Noname Noname PI 15:00-16:30 English 321 Eng
-Wednesday
-Philosophy Teacher PI 9:00-10:30 Philosophy 108 Ph
-Philosophy Teacher PI 10:40-12:10 Philosophy 108 Ph
+MONDAY
+Qu,Q,PI,9:00-10:30,Data modeling and databases,108 East,DMD
+Sadegh,N,TA,10:40-12:10,Data modeling and databases,307,DMD
+Noname,Noname,PI,15:00-16:30,English,321,Eng
+TUESDAY
+Khan,A,PI,9:00-10:30,Data structures and algorythms,108 East,DSA
+Adel,a,TA,10:40-12:10,Data structures and algorythms,318,DSA
+Mazzara,M,PI,9:00-10:30,Object oriented programming,108 East,OOP
+Ribera,V,TA,10:40-12:10,Object oriented programming,307,OOP
+Noname,Noname,PI,15:00-16:30,English,321,Eng
+WEDNESDAY
+Philosophy,Teacher,PI,9:00-10:30,Philosophy,108,Ph
+Philosophy,Teacher,PI,10:40-12:10,Philosophy,108,Ph

@@ -75,7 +75,7 @@ public class Main {
         }
 
         Information i = new Information(innopolis);
-
+        i.init();
 
     }
 }

@@ -1,154 +1,74 @@
 package ru.innopolis.senko.university.repository;
 
-import ru.innopolis.senko.university.Lection;
-import ru.innopolis.senko.university.Seminar;
 import ru.innopolis.senko.university.Subject;
 import ru.innopolis.senko.university.University;
-import ru.innopolis.senko.university.humans.PrimaryInstructor;
-import ru.innopolis.senko.university.humans.TeacherAssistant;
 import ru.innopolis.senko.university.schedule.TeachingDay;
 import ru.innopolis.senko.university.schedule.TeachingWeek;
 
+import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.List;
+import java.time.DayOfWeek;
+import java.util.EnumSet;
+import java.util.Scanner;
 
 /**
  * Created by senko on 25.10.16.
  */
 public class Information {
-
-    private List<String> lines;
-    private int currentIndex = 0;
-
-    private String getCurrentLine() {
-        return lines.get(currentIndex);
-    }
-
-    private String getCurrentLineAndMoveNext() {
-        String line = getCurrentLine();
-        currentIndex++;
-        return line;
-    }
+    public static final String REPOSITORY_DATA_TXT = "repository/data.txt";
+    public static final String COMMA = ",";
+    private EnumSet<DayOfWeek> allDays = EnumSet.allOf(DayOfWeek.class);
+    private University university;
 
     public Information(University university) throws IOException {
-        lines = Files.readAllLines(Paths.get("repository/data.txt"), StandardCharsets.UTF_8);
-        TeachingWeek week = new TeachingWeek();
-
-        TeachingDay d;
-        for (; currentIndex < lines.size(); ) {
-            String day = getCurrentLineAndMoveNext();
-            while(true) {
-                String line = getCurrentLineAndMoveNext();
-                if (line is monday, tuesday...) {
-                    break;
-                }
-
-            if (day.equals("Monday")) {
-                day = getCurrentLineAndMoveNext();
-                String[] tokens = line.split(" ");
-                d = new TeachingDay();
-                switch (tokens[2]) {
-                    case "Monday":
-                        week.setMonday(d);
-                        break;
-                    case "Truesday":
-                        week.setTuesday(d);
-                        continue;
-                    case "Wednesday":
-                        week.setWednesday(d);
-                        continue;
-                    case "Thursday":
-                        week.setThursday(d);
-                        continue;
-                    case "Friday":
-                        week.setFriday(d);
-                        continue;
-                    case "Saturday":
-                        week.setSaturday(d);
-                        continue;
-                }
-
-                if (tokens[2].equals("PI")) {
-                    PrimaryInstructor p = new PrimaryInstructor(tokens[0], tokens[1]);
-                    Lection l = new Lection();
-                    l.setTime(tokens[3]);
-                    l.setDescription(tokens[4]);
-                    l.setRoomNo(tokens[5]);
-                    l.setPrimaryInstructor(p);
-                    l.setLectionCode(tokens[6]);
-                    university.getPrimaryInstructors().add(p);
-                    Subject s = findSubject(d, tokens[4], tokens[6]);
-                    d.addSubject(s);
-                    s.addLection(l);
-
-
-                } else if (tokens[2].equals("TA")) {
-                    TeacherAssistant t = new TeacherAssistant(tokens[0], tokens[1]);
-                    Seminar s = new Seminar();
-                    s.setTime(tokens[3]);
-                    s.setDescription(tokens[4]);
-                    s.setRoomNo(tokens[5]);
-                    s.setTeacherAssistant(t);
-                    s.setSeminarCode(tokens[6]);
-                    university.getTeacherAssistants().add(t);
-                    Subject subject = findSubject(d, tokens[4], tokens[6]);
-                    d.addSubject(subject);
-                    subject.addSeminar(s);
-
-                }
-            }}
-            //     }while(line.equals("Monday"));
-
-
-        }
-        for (Subject s :
-                week.getMonday().getSubjects()) {
-
-            for (Lection l :
-                    s.getLections()) {
-                System.out.println(l.getDescription() + " " + l.getRoomNo() + " " + l.getTime());
-            }
-
-        }
-
-
-//        for (Subject s :
-//                d.getSubjects()) {
-//            for (Lection l:
-//                 s.getLections()) {
-//               System.out.println( l.getDescription());
-//
-//            }
-//
-//        }
-//
-//        for (Subject s :
-//                d.getSubjects()) {
-//            for (Seminar sm:
-//                    s.getSeminars()) {
-//                System.out.println( sm.getDescription());
-//
-//            }
-//
-//        }
-//        for (PrimaryInstructor p :
-//                university.getPrimaryInstructors()) {
-//            System.out.println(p.getName());
-//        }
-//
-//        for (TeacherAssistant t :
-//                university.getTeacherAssistants()) {
-//            System.out.println(t.getName());
-//        }
-
-
+        this.university = university;
     }
 
+    public void init() throws IOException {
+        try (Scanner scanner =
+                     new Scanner(new FileInputStream(REPOSITORY_DATA_TXT))) {
+            TeachingWeek week = new TeachingWeek();
+            while (scanner.hasNextLine()) {
+                String dayString = scanner.nextLine();
+                TeachingDay day = new TeachingDay();
+                switch (DayOfWeek.valueOf(dayString)) {
+                    case MONDAY:
+                        week.setMonday(day);
+                        break;
+                    case TUESDAY:
+                        week.setTuesday(day);
+                        break;
+                    case WEDNESDAY:
+                        week.setWednesday(day);
+                        break;
+                    case THURSDAY:
+                        week.setThursday(day);
+                        break;
+                    case FRIDAY:
+                        week.setFriday(day);
+                        break;
+                    case SATURDAY:
+                        week.setSaturday(day);
+                        break;
+                }
+                while (!hasNextDayOfWeek(scanner) && scanner.hasNextLine()) {
+                    String notDay = scanner.nextLine();
+                    String[] split = notDay.split(COMMA);
 
-    public Information() {
+                    System.out.println("notday:" + notDay);
+                }
+
+            }
+        }
+    }
+
+    private boolean hasNextDayOfWeek(Scanner scanner) {
+        for (DayOfWeek day : allDays) {
+            if (scanner.hasNext(day.name())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public Subject findSubject(TeachingDay d, String discrioption, String name) {
@@ -162,6 +82,4 @@ public class Information {
         }
         return new Subject(discrioption, name);
     }
-
-
 }
