@@ -13,6 +13,9 @@ public class TeachingDay {
     private List<Subject> subjects;
 
     public List<Subject> getSubjects() {
+        if (this.subjects == null) {
+            this.subjects = new ArrayList<>();
+        }
         return subjects;
     }
 
@@ -27,6 +30,7 @@ public class TeachingDay {
             this.subjects = new ArrayList<>();
         }
         this.subjects.add(subject);
+
     }
 
 

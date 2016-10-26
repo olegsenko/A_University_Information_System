@@ -11,37 +11,56 @@ import java.util.List;
  */
 public class Subject {
 
-    private String subjectName;
-    private String description;
-    private List<TeacherAssistant> teacherAssistants;
-    private List<PrimaryInstructor> primaryInstructors;
+    private String subjectName;//dmd dsa
+    private String description;//data struct and algs
+    //private List<TeacherAssistant> teacherAssistants;
+    //private List<PrimaryInstructor> primaryInstructors;
     private Group course;
     private boolean isCore;//core or elective
     private List<Lection> lection;
     private List<Seminar> seminar;
     private List<Assignment> assignments;
-    private FinalGrade finalGrade;
+
+    public Subject() {
+    }
+
+    public Subject(String dicription, String name) {
+        this.subjectName = name;
+        this.description = dicription;
+    }
+    //private FinalGrade finalGrade;
+
+//
+//    public void addTeacherAssistant(TeacherAssistant teacherAssistant) {
+//
+//
+//        if (this.teacherAssistants == null) {
+//            this.teacherAssistants = new ArrayList<>();
+//        }
+//        this.teacherAssistants.add(teacherAssistant);
+//
+//    }
+//
+    public void addLection(Lection l) {
 
 
-    public void addTeacherAssistant(TeacherAssistant teacherAssistant) {
-
-
-        if (this.teacherAssistants == null) {
-            this.teacherAssistants = new ArrayList<>();
+        if (this.lection == null) {
+            this.lection = new ArrayList<>();
         }
-        this.teacherAssistants.add(teacherAssistant);
+        this.lection.add(l);
 
     }
 
-    public void addPrimaryInstructor(PrimaryInstructor primaryInstructor) {
+    public void addSeminar(Seminar s) {
 
 
-        if (this.primaryInstructors == null) {
-            this.primaryInstructors = new ArrayList<>();
-        }
-        this.primaryInstructors.add(primaryInstructor);
+        if (this.seminar == null) {
+            this.seminar = new ArrayList<>();
+    }
+        this.seminar.add(s);
 
     }
+
 
 
     public String getSubjectName() {
@@ -60,18 +79,18 @@ public class Subject {
         this.description = description;
     }
 
-    public List<TeacherAssistant> getTeacherAssistant() {
-        return teacherAssistants;
-    }
-
-
-    public List<PrimaryInstructor> getPrimaryInstructors() {
-        return primaryInstructors;
-    }
-
-    public void setPrimaryInstructors(List<PrimaryInstructor> primaryInstructors) {
-        this.primaryInstructors = primaryInstructors;
-    }
+//    public List<TeacherAssistant> getTeacherAssistant() {
+//        return teacherAssistants;
+//    }
+//
+//
+//    public List<PrimaryInstructor> getPrimaryInstructors() {
+//        return primaryInstructors;
+//    }
+//
+//    public void setPrimaryInstructors(List<PrimaryInstructor> primaryInstructors) {
+//        this.primaryInstructors = primaryInstructors;
+//    }
 
     public Group getCourse() {
         return course;
@@ -89,7 +108,10 @@ public class Subject {
         isCore = core;
     }
 
-    public List<Lection> getLection() {
+    public List<Lection> getLections() {
+        if (this.lection == null){
+            this.lection = new ArrayList<>();
+        }
         return lection;
     }
 
@@ -97,7 +119,10 @@ public class Subject {
         this.lection = lection;
     }
 
-    public List<Seminar> getSeminar() {
+    public List<Seminar> getSeminars() {
+        if (this.seminar == null){
+            this.seminar = new ArrayList<>();
+        }
         return seminar;
     }
 
@@ -105,21 +130,28 @@ public class Subject {
         this.seminar = seminar;
     }
 
-    public FinalGrade getFinalGrade() {
-        return finalGrade;
-    }
+//    public FinalGrade getFinalGrade() {
+//        return finalGrade;
+//    }
 
-    public void setFinalGrade(FinalGrade finalGrade) {
-        this.finalGrade = finalGrade;
-    }
+//    public void setFinalGrade(FinalGrade finalGrade) {
+//        this.finalGrade = finalGrade;
+//    }
 
-    public void setTeacherAssistants(List<TeacherAssistant> teacherAssistants) {
-        this.teacherAssistants = teacherAssistants;
-    }
+//    public void setTeacherAssistants(List<TeacherAssistant> teacherAssistants) {
+//        this.teacherAssistants = teacherAssistants;
+//    }
+//
+//    public List<TeacherAssistant> getTeacherAssistants() {
+//        return teacherAssistants;
+//    }
 
-    public List<TeacherAssistant> getTeacherAssistants() {
-        return teacherAssistants;
-    }
 
+    public boolean equals(Subject that){
+        if (this.subjectName.equals(that.subjectName) &&this.description.equals(that.description )){
+            return true;
+        }
+        return false;
+    }
 
 }

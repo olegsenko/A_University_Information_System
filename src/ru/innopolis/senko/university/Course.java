@@ -1,5 +1,8 @@
 package ru.innopolis.senko.university;
 
+import ru.innopolis.senko.university.humans.Student;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,6 +13,7 @@ public class Course {
 
     private List<Group> groups;
     private int courseYear;
+    private List<Student> students;
 
     enum CourseName {BS1, BS2, BS3, BS4, MS1, MS2}
 
@@ -43,6 +47,16 @@ public class Course {
 
 
         }
+    }
+
+    public List<Student> getStudents() {
+        if (students == null) {
+            students = new ArrayList<>();
+        }
+        return students;
+    }
+    public void setStudents(List<Student> students) {
+        this.students = students;
     }
 
     public String getCourseName() {

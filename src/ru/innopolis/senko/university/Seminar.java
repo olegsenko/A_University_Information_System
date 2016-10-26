@@ -18,7 +18,12 @@ public class Seminar {
 
 
 
+    public Seminar(TeacherAssistant teacherAssistant) {
+        this.teacherAssistant = teacherAssistant;
+    }
+
     public Seminar() {
+
     }
 
 

@@ -31,14 +31,15 @@ public class Main {
         PrimaryInstructor eugene_Zouev = new PrimaryInstructor();
 
         Subject introToProg = new Subject();
-        Seminar iTP = new Seminar();
+        //Seminar iTP = new Seminar();
 
 
         introToProg.setSubjectName("Introduction to Programming");
-        introToProg.addTeacherAssistant(alex_Tchitchigin);
-        introToProg.addPrimaryInstructor(eugene_Zouev);
+        introToProg.getLections().add(new Lection(eugene_Zouev));
+        introToProg.getSeminars().add(new Seminar(alex_Tchitchigin));
 
-        //introToProg.getSeminar().add(ru.innopolis.senko.university.Seminar introToProg = new ru.innopolis.senko.university.Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
+
+        //introToProg.getSeminars().add(ru.innopolis.senko.university.Seminar introToProg = new ru.innopolis.senko.university.Seminar("introduction To Programming", "ItP", alex_Tchitchigin ));
         //ru.innopolis.senko.university.Seminar introToProg = new ru.innopolis.senko.university.Seminar("introduction To Programming", "ItP", alex_Tchitchigin );
 
         eugene_Zouev.setName(new FullName("Eugene", "Zouev"));
@@ -52,26 +53,24 @@ public class Main {
 
         //System.out.println(olegSenko.getName().toString());
 
-        iTP.setTeacherAssistant(alex_Tchitchigin);
-
-        iTP.getTeacherAssistant();
-
-        innopolis.getStudents().add(olegSenko);
-        innopolis.getStudents().add(ivanIvanov);
 
 
-        for (Student s :
-                innopolis.getStudents()) {
-            System.out.println(s.getName());
-        }
+       // innopolis.getStudents().add(olegSenko);
+       // innopolis.getStudents().add(ivanIvanov);
 
-        for (TeacherAssistant s :
-                introToProg.getTeacherAssistant()) {
-            System.out.println(s.getName());
+
+//        for (Student s :
+//                innopolis.getStudents()) {
+//            System.out.println(s.getName());
+//        }
+
+        for (Seminar s :
+                introToProg.getSeminars()) {
+            System.out.println(s.getTeacherAssistant().getName());
         }
 
         for (PrimaryInstructor s :
-                introToProg.getPrimaryInstructors()) {
+                innopolis.getPrimaryInstructors()) {
             System.out.println(s.getName());
         }
 

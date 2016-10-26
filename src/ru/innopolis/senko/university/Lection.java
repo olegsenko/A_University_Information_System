@@ -17,6 +17,10 @@ public class Lection {
         this.primaryInstructor = primaryInstructor;
     }
 
+
+    public Lection() {
+    }
+
     public String getTime() {
         return time;
     }

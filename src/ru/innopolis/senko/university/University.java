@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class University {
 
-    private List<Student> students;
+    public List <Course> courses;
 
     public List<PrimaryInstructor> primaryInstructors;
 
@@ -21,16 +21,13 @@ public class University {
 
     private List<TeachingSchedule> schedule;
 
-    public List<Student> getStudents() {
-        if (students == null) {
-            students = new ArrayList<>();
-        }
-        return students;
+
+    public List<Course> getCourses() {
+        return courses;
     }
 
-
-    public void setStudents(List<Student> students) {
-        this.students = students;
+    public void setCourses(List<Course> courses) {
+        this.courses = courses;
     }
 
     public List<PrimaryInstructor> getPrimaryInstructors() {
@@ -45,6 +42,9 @@ public class University {
     }
 
     public List<TeacherAssistant> getTeacherAssistants() {
+        if (teacherAssistants == null){
+            teacherAssistants = new ArrayList<>();
+        }
         return teacherAssistants;
     }
 
@@ -60,8 +60,5 @@ public class University {
         this.schedule = schedule;
     }
 
-    public String toString() {
-        return students.toString();
-    }
 
 }

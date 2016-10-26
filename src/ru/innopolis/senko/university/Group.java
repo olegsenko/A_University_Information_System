@@ -6,7 +6,7 @@ package ru.innopolis.senko.university;
 public class Group {
     //TODO:
 
-    private String groupCode;//1-4, msit-ssne, msit-se, etc.
+    private String groupCode;//1, 2, 3, 4, msit-ssne, msit-se, etc.
 
 
     public String getGroupCode() {

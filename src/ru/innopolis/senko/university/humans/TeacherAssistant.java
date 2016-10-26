@@ -12,6 +12,14 @@ public class TeacherAssistant extends Person {
 
     private List<Seminar> seminars;
 
+    public TeacherAssistant(String name, String surname) {
+        this.setName(new FullName(name, surname));
+    }
+
+    public TeacherAssistant() {
+
+    }
+
     public List<Seminar> getSeminar() {
         return seminars;
     }
